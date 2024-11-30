@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Strike&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Work Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    background: linear-gradient(135deg, #ffb6c1, #fdf3f7); /* Gradiente suave para o fundo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    text-align: center;
+    background-color: #fff0f8;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    border: 2px solid #f8b4d9;
+    transition: transform 0.3s ease-in-out;
+}
+
+.game-container:hover {
+    transform: scale(1.05); /* Efeito de zoom no container */
+}
+
+h1 {
+    font-size: 28px;
+    color: #ff4f77; /* Cor de destaque */
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 18px;
+    color: #ff80ab;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 18px;
+    margin: 15px 0;
+    border-radius: 25px;
+    border: none;
+    background-color: #ff80ab;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: #ff4f77;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:disabled {
+    background-color: #ffb6c1;
+    cursor: not-allowed;
+}
+
+.options {
+    margin: 20px 0;
+    border: 2px solid #f8b4d9; /* Borda nas opções */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 20px;
+    text-align: left;
+    background-color: #fff;
+    width: 100%; /* Garante que ocupe toda a largura do container */
+    box-sizing: border-box;
+}
+
+.options label {
+    display: block;
+    margin: 12px 0;
+    font-size: 20px;
+    color: #ff4f77;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.options label:hover {
+    transform: translateX(5px); /* Efeito de deslizar para a direita quando passa o mouse */
+}
+
+input[type="radio"] {
+    margin-right: 12px;
+    accent-color: #ff4f77; /* Cor do botão de opção */
+}
+
+#feedback {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff4f77;
+    transition: opacity 0.5s ease;
+}
+
+#nextQuestion,
+#finishGame {
+    display: none;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 20px;
+    background-color: #ff80ab;
+    color: white;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+#nextQuestion:hover,
+#finishGame:hover {
+    background-color: #ff4f77;
+}
+
+#nextQuestion:active,
+#finishGame:active {
+    transform: scale(0.98);
+}
+
+/* Animações de transição para perguntas */
+.game-container {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Media Queries - Responsividade */
+
+/* Para telas grandes (desktops) */
+@media (max-width: 1200px) {
+    .game-container {
+        width: 400px; /* Ajustando o tamanho para telas grandes */
+        padding: 35px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+
+    .options label {
+        font-size: 18px;
+    }
+}
+
+/* Para tablets (telas médias) */
+@media (max-width: 768px) {
+    .game-container {
+        width: 90%; /* Adapta o tamanho para tablets */
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+
+    .options label {
+        font-size: 18px;
+    }
+}
+
+/* Para dispositivos móveis (celulares) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px; /* Reduzindo o padding para não sobrecarregar a tela */
+    }
+
+    .game-container {
+        width: 100%; /* Garantir que o container ocupe toda a largura da tela */
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .options label {
+        font-size: 16px;
+    }
+}

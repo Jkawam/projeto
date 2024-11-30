@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prova do Amor</title>
+    <link rel="shortcut icon" href="icon/coracao.png" type="image/x-icon">
+    <link rel="stylesheet" href="prova.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Prova do Amor</h1>
+        <p>Responda corretamente para ganhar a surpresa!</p>
+
+        <div class="question-container">
+            <p id="question">Onde nos conhecemos?</p>
+
+            <!-- Opções de resposta (itens) -->
+            <div class="options">
+                <label>
+                    <input type="radio" name="answer" value="na escola">
+                    Na escola
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="no shopping">
+                    No shopping
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="na festa">
+                    Na festa
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="na rua">
+                    Na rua
+                </label>
+            </div>
+
+            <button id="submitAnswer">Enviar Resposta</button>
+        </div>
+
+        <p id="feedback"></p>
+        <button id="nextQuestion" style="display: none;">Próxima Pergunta</button>
+        <button id="finishGame" style="display: none;">Finalizar Jogo</button>
+    </div>
+
+    <script src="prova.js"></script>
+</body>
+</html>
